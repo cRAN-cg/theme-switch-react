@@ -1,0 +1,42 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App.theme-dark {
+  background: black;
+  color: white;
+}
+
+.switch {
+  margin-top: 10px;
+  position: relative;
+}
+
+.switch input {
+  scale: 0;
+}
+.slider {
+  position: absolute;
+  height: 30px;
+  width: 80px;
+  background: grey;
+  border-radius: 18px;
+  transition: 0.7s;
+}
+
+.slider::after {
+  content: "😢";
+  position: absolute;
+  transform: translateX(-30px);
+  transition: 0.3s;
+}
+
+.switch input:checked + .slider::after {
+  content: "😊";
+  position: absolute;
+  transform: translateX(10px);
+}
